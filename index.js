@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-    origin: process.env.FRONTEND_URL ? process.env.FRONTEND_URL.split(',') : ['http://localhost:5173', 'http://localhost:5174'],
+    origin: process.env.FRONTEND_URL ? process.env.FRONTEND_URL.split(',') : ['https://job-portal-frontend-eosin-rho.vercel.app', 'http://localhost:5173'],
     credentials: true
 }
 
