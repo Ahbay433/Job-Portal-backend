@@ -19,6 +19,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+<<<<<<< HEAD
+=======
+const corsOptions = {
+    origin: process.env.FRONTEND_URL ? process.env.FRONTEND_URL.split(',') : ['https://job-portal-frontend-eosin-rho.vercel.app', 'http://localhost:5173'],
+    credentials: true
+}
+>>>>>>> e11f44c4d653e3e58dfd0f1bd558e83e6cf90aad
 
 /* =======================
    CORS CONFIG (IMPORTANT)
@@ -68,6 +75,12 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
+<<<<<<< HEAD
   connectDB();
   console.log(`✅ Server running on port ${PORT}`);
 });
+=======
+    connectDB();
+    console.log(`Server running at port ${PORT}`);
+})
+>>>>>>> e11f44c4d653e3e58dfd0f1bd558e83e6cf90aad
